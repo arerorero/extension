@@ -1,0 +1,20 @@
+{
+  "name": "ARERORERO Colors :)(",
+  "version": "1.0.0",
+  "description": "Ela é fogo nos olhos, é febre nos passos, ela é faca nos dentes, é aço nos braços, ela é dura no trato, é dengo no bafo, ela é pinga no copo, é pernas pro espaço...",
+  "manifest_version": 3,
+  "author": "@arerorero",
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_title": "ARERORERO Colors :)("
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "css": ["./script/colors.css"],
+      "js": ["./script/script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage"]
+}
