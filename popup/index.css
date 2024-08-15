@@ -1,8 +1,11 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ddd;
-  min-width: 500px;
-  max-width: 100%;
-  min-height: 400px;
+  min-width: 400px;
+  max-width: 600px;
+  min-height: 225px;
   margin: 0;
 }
 
@@ -16,6 +19,11 @@ body {
 
 .color-aaf {
   color: #aaf !important;
+}
+
+.checkbox-aaf:checked {
+  background-color: #aaf;
+  border-color: rgb(85, 85, 255);
 }
 
 #snackbar {

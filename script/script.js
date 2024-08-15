@@ -224,10 +224,11 @@ async function changeBackground(text, speed = 10) {
   }
 }
 
-window.onload = function () {
-  const crazy_text = chrome.storage.sync.get(["crazy_text"]);
-  const crazy_colors = chrome.storage.sync.get(["crazy_colors"]);
-  const crazy_speed = chrome.storage.sync.get(["crazy_speed"]);
-  if (!crazy_colors) return;
-  changeBackground(crazy_text, crazy_speed);
+window.onload = async function () {
+  const data = await chrome.storage.sync.get();
+  const turned_on = data.turned_on;
+  const text_on = data.text_on;
+  const crazy_speed = data.crazy_speed;
+  if (!turned_on) return;
+  changeBackground(text_on, crazy_speed);
 };
